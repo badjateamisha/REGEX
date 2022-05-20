@@ -7,7 +7,7 @@ Console.WriteLine("Welcome to User Registration Problem Using REGEX!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Validating FirstName\n2)Validating LastName");
+    Console.WriteLine("Please choose the option :\n1)Entering Valid FirstName\n2)Entering Valid LastName\n3)Entering Valid EmailId");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -19,5 +19,10 @@ while (true)
             UserRegistration userRegistration1 = new UserRegistration();
             userRegistration1.LastName();
             break;
+        case 3:
+            UserRegistration EmailID = new UserRegistration();
+            EmailID.EmailID();
+            break;
+            
     }
 }
