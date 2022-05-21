@@ -27,6 +27,10 @@ while (true)
             UserRegistration Mobileno = new UserRegistration();
             Mobileno.MobileNumber();
             break;
+        case 5:
+            UserRegistration Pass = new UserRegistration();
+            Pass.Password();
+            break;
         default:
             Console.WriteLine("Please select the correct option");
             break;
