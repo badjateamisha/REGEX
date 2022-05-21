@@ -95,6 +95,23 @@ namespace REGEX
             }
         }
 
+        public void PasswordRule2()
+        {
+            Console.WriteLine("Enter Password");
+            var PasswordRule2 = (Console.ReadLine());
+            var passwordRule2 = "^(?=.*[A-Z])[0-9a-zA-z]{8,}$";
 
+            Regex regex = new Regex(passwordRule2);
+
+            if (regex.IsMatch(PasswordRule2))
+            {
+                Console.Write("Password is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter valid Password \n");
+            }
+
+        }
     }
 }
