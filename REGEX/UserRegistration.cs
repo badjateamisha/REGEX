@@ -79,6 +79,21 @@ namespace REGEX
             }
 
         }
+        public void Password()
+        {
+            Console.WriteLine("Enter Password :");
+            var Password = Console.ReadLine();
+            var PasswordFormat = "[a-zA-Z0-9]{8,}";
+            Regex regex1 = new Regex(PasswordFormat);
+            if (regex1.IsMatch(Password))
+            {
+                Console.Write("Given Password is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Password in Proper Format \n");
+            }
+        }
 
     }
 }
