@@ -7,7 +7,7 @@ Console.WriteLine("Welcome to User Registration Problem Using REGEX!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Entering Valid FirstName\n2)Entering Valid LastName\n3)Entering Valid EmailId\n4)Enter Mobile Number");
+   Console.WriteLine("Please choose the option :\n1)Entering Valid FirstName\n2)Entering Valid LastName\n3)Entering Valid EmailId\n4)Enter Mobile Number\n5)Enter Password(Minimum 8 characrters required) ");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
