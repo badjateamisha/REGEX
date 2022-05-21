@@ -7,7 +7,7 @@ Console.WriteLine("Welcome to User Registration Problem Using REGEX!");
 
 while (true)
 {
-   Console.WriteLine("Please choose the option :\n1)Entering Valid FirstName\n2)Entering Valid LastName\n3)Entering Valid EmailId\n4)Enter Mobile Number\n5)Enter Password(Minimum 8 characrters required)\n6)Enter Password(1 uppercase letter required)\n7)Enter Password(Atleast 1 number required)\n8)Enter Password(with 1 special character) ");
+   Console.WriteLine("Please choose the option :\n1)Entering Valid FirstName\n2)Entering Valid LastName\n3)Entering Valid EmailId\n4)Enter Mobile Number\n5)Enter Password(Minimum 8 characrters required)\n6)Enter Password(1 uppercase letter required)\n7)Enter Password(Atleast 1 number required)\n8)Enter Password(with 1 special character)\n9)Different Email Format");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -42,6 +42,10 @@ while (true)
         case 8:
             UserRegistration PasswordR4 = new UserRegistration();
             PasswordR4.PasswordRule4();
+            break;
+        case 9:
+            EmailValidation emailValidation = new EmailValidation();
+            emailValidation.EmailID();
             break;
         default:
             Console.WriteLine("Please select the correct option");
