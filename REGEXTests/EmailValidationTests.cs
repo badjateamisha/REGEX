@@ -27,6 +27,7 @@ namespace REGEX.Tests
             Assert.AreEqual(true, ur2.Email_ID("abc-100@yahoo.com"));
         }
 
+
         [TestMethod()]
         public void EmailIDTest3()
         {
