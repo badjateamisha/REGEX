@@ -14,16 +14,16 @@ namespace REGEX.Tests
         public void FirstNameTest()
         {
             UserRegistration UR1 = new UserRegistration();
-            UR1.FirstName("Vishnu");
-            Assert.AreEqual(true, UR1.FirstName("Vishnu"));
+            UR1.FirstName("Amisha");
+            Assert.AreEqual(true, UR1.FirstName("Amisha"));
         }
 
         [TestMethod()]
         public void LastNameTest()
         {
             UserRegistration UR2 = new UserRegistration();
-            UR2.LastName("Vardhan");
-            Assert.AreEqual(true, UR2.LastName("Vardhan"));
+            UR2.LastName("Jain");
+            Assert.AreEqual(true, UR2.LastName("Jain"));
         }
 
         [TestMethod()]
