@@ -7,7 +7,8 @@ Console.WriteLine("Welcome to User Registration Problem Using REGEX!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Validating FirstName\n2)Validating LastName\n3)Email ID\n4)Mobile Number\n5)Password of 8digits\n6)Password with atleast 1 capital letter\n7)Atleast 1number\n8)Atleast 1 special Character\n9)Different Email Formats");
+    Console.WriteLine("Please choose the option :\n1)Validating FirstName\n2)Validating LastName\n3)Email ID\n4)Mobile Number\n5)Password of 8digits\n6)Password with atleast 1 capital letter\n7)Atleast 1number\n8)Atleast 1 special Character\n9)Different Email Formats\n10)Custom " +
+        "Exception for FirstName\n11)Custom Exception LastName\n12)customException EmailID\n13)Custom Exception Mobile Number\n14)Custom Exception Password");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -64,6 +65,35 @@ while (true)
             string Email_ID = Console.ReadLine();
             EmailValidation emailValidation = new EmailValidation();
             emailValidation.Email_ID(Email_ID);
+            break;
+        case 10:
+            CustomUserregistration C1 = new CustomUserregistration();
+            string FirstName = C1.CustomException_FirstName("Vishnu");
+            Console.WriteLine(FirstName);
+            break;
+
+        case 11:
+            CustomUserregistration C2 = new CustomUserregistration();
+            string LastName = C2.CustomException_LastName("Vardhan");
+            Console.WriteLine(LastName);
+            break;
+
+        case 12:
+            CustomUserregistration C3 = new CustomUserregistration();
+            string Email = C3.CustomException_EmailID("abc.xyz@bl.co.in");
+            Console.WriteLine(Email);
+            break;
+
+        case 13:
+            CustomUserregistration C4 = new CustomUserregistration();
+            string Mobilenumber = C4.CustomException_MobileNumber("+91 1234567890");
+            Console.WriteLine(Mobilenumber);
+            break;
+
+        case 14:
+            CustomUserregistration C5 = new CustomUserregistration();
+            string PasswordRule = C5.CustomException_InvalidPasswordRule("Vish#123");
+            Console.WriteLine(PasswordRule);
             break;
         default:
             Console.WriteLine("Please select the above options only");
