@@ -11,9 +11,11 @@ namespace REGEX
     {
         public enum ValidationMessage
         {
-            InvalidFirstName, InvalidLastName,
+            InvalidFirstName, InvalidLastName, 
             InvalidEmailId, InvalidMobileNumber,
-            InvalidPasswordRule
+            InvalidPasswordRule,
+            InvalidSampleEmailId
+
         }
         public readonly ValidationMessage Type;
 
@@ -28,11 +30,11 @@ namespace REGEX
         //FirstName
         public string CustomException_FirstName(string message)
         {
-
+            
             try
             {
 
-                if (string.IsNullOrEmpty(message))
+                if(string.IsNullOrEmpty(message))
                 {
                     throw new CustomExceptions(CustomExceptions.ValidationMessage.InvalidFirstName, "FirstName Should not be Empty or Null");
                 }
@@ -41,7 +43,7 @@ namespace REGEX
                 Regex regex = new Regex(firstname);
 
                 if (regex.IsMatch(message))
-                {
+                {                   
                     Console.Write("Name is Valid \n");
                     return "Name is Valid ";
                 }
@@ -51,8 +53,8 @@ namespace REGEX
 
                 }
             }
-
-            catch (Exception ex)
+            
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -77,7 +79,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("Name is Valid \n");
-                    return "Name is Valid ";
+                    return message;
                 }
                 else
                 {
@@ -111,7 +113,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("EmailID is Valid \n");
-                    return "EmailID is Valid ";
+                    return message;
                 }
                 else
                 {
@@ -145,7 +147,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("MobileNumber is Valid \n");
-                    return "MobileNumber is Valid ";
+                    return message;
                 }
                 else
                 {
@@ -180,7 +182,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("Password is Valid \n");
-                    return "Password is Valid ";
+                    return message;
                 }
                 else
                 {
