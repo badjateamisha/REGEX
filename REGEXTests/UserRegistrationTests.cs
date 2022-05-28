@@ -15,16 +15,16 @@ namespace REGEX.Tests
         public void FirstNameTest()
         {
             UserRegistration UR1 = new UserRegistration();
-            UR1.FirstName("Amisha");
-            Assert.AreEqual(true, UR1.FirstName("Amisha"));
+            UR1.FirstName("Vishnu");
+            Assert.AreEqual(true, UR1.FirstName("Vishnu"));
         }
 
         [TestMethod()]
         public void LastNameTest()
         {
             UserRegistration UR2 = new UserRegistration();
-            UR2.LastName("Jain");
-            Assert.AreEqual(true, UR2.LastName("Jain"));
+            UR2.LastName("Vardhan");
+            Assert.AreEqual(true, UR2.LastName("Vardhan"));
         }
 
         [TestMethod()]
@@ -73,23 +73,6 @@ namespace REGEX.Tests
             UserRegistration UR8 = new UserRegistration();
             UR8.PasswordRule4("PassWordRule@4");
             Assert.AreEqual(true, UR8.PasswordRule4("PassWordRule@4"));
-        }
-
-        [TestMethod()]
-        public void PasswordRule4Test1()
-        {
-            try
-            {
-                UserRegistration UR8 = new UserRegistration();
-                UR8.PasswordRule4("PassWordRule@4");
-                Assert.AreEqual(true, UR8.PasswordRule4("123z"));
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
         }
     }
 }
